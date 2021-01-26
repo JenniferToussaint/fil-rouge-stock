@@ -1,0 +1,48 @@
+<li  [ngClass]="{ 'list-group-item' : true,
+                  'list-group-item-info' : productOnStock =='En stock',
+                  'list-group-item-danger' : productOnStock == 'Rupture de stock'
+
+                }">
+
+
+<div class="row">
+  <div class="col-2">
+    <img class="img-product" [src]="productPicture">
+  </div>
+  <div class="col-8">
+    <div class="statut-stock" *ngIf="productOnStock == 'En stock'">
+      <img class="img-stock" src="https://png.pngtree.com/element_our/sm/20180515/sm_5afb099d307d3.jpg" alt="">
+    </div>
+    <div class="statut-stock" *ngIf="productOnStock == 'Rupture de stock'">
+      <img class="img-stock" src="https://img2.freepng.fr/20180316/xww/kisspng-american-red-cross-computer-icons-christian-cross-big-red-cliparts-5aac41c670a9b9.3967742115212384704615.jpg" alt="">
+    </div>
+
+    <h3 [ngStyle]="{color: changeColor()}"> Produit : {{productName}} | {{ color }}</h3>
+
+  </div>
+
+  <div class="col-2">
+    <a class="btn btn-outline-secondary m-2" [routerLink]="['/modif', id]">Modifier</a> &nbsp;
+    <button class="btn btn-outline-danger" (click)="removeProduct(id)">Supprimer</button>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-12">
+    {{ details }}
+  </div>
+</div>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+

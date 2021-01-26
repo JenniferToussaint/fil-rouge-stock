@@ -1,0 +1,21 @@
+
+<ul class="list-group">
+
+  <app-product *ngFor="let product of products" 
+  [productName]="product.title" 
+  [productOnStock]="product.statutStock" 
+  [productPicture]="product.picture"
+  [details]="product.details"
+  [color]="product.color"
+  [id]="product._id">
+  </app-product>
+
+</ul>
+
+<br>
+
+<!-- <button class="btn btn-outline-success" (click)="setOnStockAll()">Mettre en stock
+
+</button> &nbsp;
+<button class="btn btn-outline-danger" (click)="setOffStockAll()">Mettre en rupture de stock</button>
+ -->

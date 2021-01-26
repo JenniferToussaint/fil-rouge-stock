@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label >Titre</label>
+      <br>
+      <input type="text" class="form-control" [(ngModel)]="product.title">
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-group">
+      <label >Image</label>
+      <br>
+      <input type="text" class="form-control" [(ngModel)]="product.picture">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label >Statut stock</label>
+      <br>
+      <input type="text" class="form-control" [(ngModel)]="product.statutStock">
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-group">
+      <label >Couleur</label>
+      <br>
+      <input type="text" class="form-control" [(ngModel)]="product.color">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="form-group">
+      <label>Détails</label>
+      <br>
+      <textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="product.details"></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="text-center"><button class="btn btn-outline-success"(click)="onModif()">Envoyer</button></div>
